@@ -19,10 +19,10 @@ public class ViewUser {
 
         while (true) {
             try {
-                String command = prompt("Введите команду: ");
+                String command = prompt("Введите команду:\n\nNONE\nREAD\nCREATE\nUPDATE\nLIST\nDELETE\nEXIT\n\n");
                 com = Commands.valueOf(command.toUpperCase());
             } catch (IllegalArgumentException e) {
-                System.out.println("Unknown command");
+                System.out.println("Неизвестная команда!");
                 continue;
             }
             if (com == Commands.EXIT) return;
